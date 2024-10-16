@@ -69,15 +69,19 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.ViewModelProvider
 import coil.compose.AsyncImage
 import coil.compose.SubcomposeAsyncImage
 import coil.request.ImageRequest
+import com.demo.compose.statetest.StateTestScree
+import com.demo.compose.statetest.StateTestViewModel
 import com.demo.compose.ui.theme.DemoComposeTestTheme
 
 class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val viewModel = ViewModelProvider(this)[StateTestViewModel::class.java]
         setContent {
             DemoComposeTestTheme {
                 // A surface container using the 'background' color from the theme
@@ -91,7 +95,9 @@ class MainActivity : ComponentActivity() {
                     //CustomImageLoader()
                     //RippleEffect()
                     //SpringDrawingShape()
-                    MyScreen()
+                    //MyScreen()
+                    //CustomDrawer()
+                    StateTestScree(viewModel)
                 }
             }
         }
@@ -105,9 +111,11 @@ fun DefaultPreview() {
     //CustomTextField()
     //CustomSeekBar()
     //CustomListItem()
-    CustomImageLoader()
+    //CustomImageLoader()
     //CircleImage()
     //RippleEffect()
+    //CustomDrawer()
+    //StateTestScree()
 }
 
 

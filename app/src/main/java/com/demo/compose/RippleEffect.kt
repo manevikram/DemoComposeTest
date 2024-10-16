@@ -27,12 +27,12 @@ fun RippleEffect() {
             text = "Hello World",
             modifier = Modifier
                 .clickable(
-                    interactionSource = remember {
+                    /*interactionSource = remember {
                         MutableInteractionSource()
-                    },
-                    indication = rememberRipple(
+                    },*/
+                   /* indication = rememberRipple(
                         color = Color.Red
-                    ),
+                    ),*/
                     onClick = {}
                 )
                 .padding(16.dp),
