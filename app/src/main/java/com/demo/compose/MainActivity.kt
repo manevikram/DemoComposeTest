@@ -97,7 +97,10 @@ class MainActivity : ComponentActivity() {
                     //SpringDrawingShape()
                     //MyScreen()
                     //CustomDrawer()
-                    StateTestScree(viewModel)
+                    //StateTestScree(viewModel)
+                    //ExampleScreen()
+                    //ColorFillButton(onClick = { /*TODO*/ })
+                    AnimatedFillButton(text = "Watch Now", onClick = { /*TODO*/ })
                 }
             }
         }
